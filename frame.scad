@@ -74,11 +74,13 @@ module stand(){
 			import (file = "frame.dxf", layer = "stands_profile");
 	}
 	
+	translate([25.25,-0.5,10])cube([3.5,3,2]);
+	translate([-28.75,-0.5,10])cube([3.5,3,2]);
 }
 
 
-//frame();
-translate([0,30,-5.0])stand();
+frame();
+//translate([0,30,-5.0])stand();
 //translate([0,-30,-5.0])stand();
 
 
