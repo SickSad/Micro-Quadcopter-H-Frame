@@ -14,9 +14,9 @@ module frame(){
 		union(){
 			intersection(){
 				linear_extrude(height = 15, center = true, convexity = 10, $fn=100)
-					import (file = "frame_8mm.dxf", layer = "frame");
+					import (file = "frame.dxf", layer = "frame");
 				translate([0,0,-5])rotate([90,0,0])linear_extrude(height = 80, center = true, convexity = 10, $fn=100)
-					import (file = "frame_8mm.dxf", layer = "front_profile");	
+					import (file = "frame.dxf", layer = "front_profile");	
 			}
 			translate([12.5,32.5,1])led_holder();
 			translate([-12.5,32.5,1])led_holder();
@@ -67,11 +67,11 @@ module frame(){
 module stand(){
 	intersection(){
 		rotate([90,0,0])linear_extrude(height = 8, center = true, convexity = 10, $fn=200, center=true)
-			import (file = "frame_8mm.dxf", layer = "stands_top");
+			import (file = "frame.dxf", layer = "stands_top");
 			//translate([35.5778/2,0,0])cylinder(r=1.9, h=0.5, $fn=100);
 			//translate([-35.5778/2,0,0])cylinder(r=1.9, h=0.5, $fn=100);
 		rotate([0,0,0])linear_extrude(height = 30, center = true, convexity = 10, $fn=200, center=true)
-			import (file = "frame_8mm.dxf", layer = "stands_profile");
+			import (file = "frame.dxf", layer = "stands_profile");
 	}
 	
 	translate([25.25,-0.5,10])cube([3.5,3,2]);
